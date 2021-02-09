@@ -4,6 +4,7 @@ class Status extends React.Component {
         return (
             <>
                 <h1>Status</h1>
+                <h2>Welcome</h2>
             </>
         )
     }
