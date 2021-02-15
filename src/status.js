@@ -1,11 +1,20 @@
 import React from "react"
+import {connect} from "react-redux"
+
 class Status extends React.Component {
     render() {
         return (
             <>
-                <h1>Status</h1>
+                <h1>Status Counter {this.props.count}</h1>
             </>
         )
     }
 }
-export default Status
+
+const mapGlobalStateToProps = (globalStore) => {
+    return {
+        count: globalStore.count,
+    }
+}
+
+export default connect(mapGlobalStateToProps)(Status)
